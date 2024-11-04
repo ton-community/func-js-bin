@@ -7,7 +7,7 @@ export type FuncWASMObject = {
 
 export const object: FuncWASMObject = {
     schemaVersion: 1,
-    funcVersion: '0.4.4',
+    funcVersion: '0.4.6',
     module: require('./funcfiftlib.js'),
     wasmBase64: require('./funcfiftlib.wasm.js').FuncFiftLibWasm,
 };

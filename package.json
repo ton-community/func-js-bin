@@ -1,7 +1,7 @@
 {
   "name": "@ton-community/func-js-bin",
   "description": "Distribution of WASM module and binary for func-js",
-  "version": "0.4.4-newops.1",
+  "version": "0.4.6-beta.1",
   "main": "dist/index.js",
   "author": "TonTech",
   "license": "MIT",
@@ -22,5 +22,6 @@
     "wasm:copy": "cp ./src/funcfiftlib.js ./src/funcfiftlib.wasm.js ./dist",
     "build": "yarn wasm:pack && rm -rf dist && tsc && yarn wasm:copy"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "packageManager": "yarn@1.22.19+sha1.4ba7fc5c6e704fce2066ecbfb0b0d8976fe62447"
 }
