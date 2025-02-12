@@ -1,7 +1,7 @@
 {
   "name": "@ton-community/func-js-bin",
   "description": "Distribution of WASM module and binary for func-js",
-  "version": "0.4.6",
+  "version": "0.4.6-wasmfix.0",
   "main": "dist/index.js",
   "author": "TonTech",
   "license": "MIT",
