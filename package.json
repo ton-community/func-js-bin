@@ -19,7 +19,7 @@
   },
   "scripts": {
     "wasm:pack": "yarn ts-node ./scripts/pack-wasm.ts",
-    "wasm:copy": "cp ./src/funcfiftlib.js ./src/funcfiftlib.wasm.js ./dist",
+    "wasm:copy": "cp ./src/funcfiftlib.js ./src/funcfiftlib.wasm.js ./src/funcfiftlib.debugger.bpatch.gzip.js ./src/funcfiftlib.debugger.js ./dist",
     "build": "yarn wasm:pack && rm -rf dist && tsc && yarn wasm:copy"
   },
   "dependencies": {},

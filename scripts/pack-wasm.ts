@@ -1,6 +1,10 @@
 import * as fs from "fs";
 
-const wasmData = fs.readFileSync('./src/funcfiftlib.wasm');
-const out = `module.exports = { FuncFiftLibWasm: '${wasmData.toString('base64')}'}\n`;
+function encode(src: string, dest: string, name: string) {
+    const data = fs.readFileSync(src);
+    const out = `module.exports = { ${name}: '${data.toString('base64')}'}\n`;
+    fs.writeFileSync(dest, out);
+}
 
-fs.writeFileSync('./src/funcfiftlib.wasm.js', out);
+encode('./src/funcfiftlib.wasm', './src/funcfiftlib.wasm.js', 'FuncFiftLibWasm');
+encode('./src/funcfiftlib.debugger.bpatch.gzip', './src/funcfiftlib.debugger.bpatch.gzip.js', 'DebuggerPatchGzip');
